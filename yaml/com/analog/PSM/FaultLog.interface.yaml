@@ -1,0 +1,44 @@
+description: >
+    Implement to manage fault logs in Analog Devices PSM Devices.
+methods:
+
+    - name: EnableFaultLog
+      description: >
+          Enable the fault log.
+      errors:
+        - com.analog.PSM.Error.FaultLogsNotSupported
+
+    - name: DisableFaultLog
+      description: >
+          Disable the fault log.
+      errors:
+        - com.analog.PSM.Error.FaultLogsNotSupported
+
+    - name: ClearFaultLog
+      description: >
+          Clear the fault log.
+      errors:
+        - com.analog.PSM.Error.FaultLogsNotSupported
+
+    - name: HasFaultLog
+      description: >
+          Check if a fault log exists.
+      returns:
+        - name: hasFaultLog
+          type: boolean
+          description: >
+              True if there is a fault log.
+      errors:
+        - com.analog.PSM.Error.FaultLogsNotSupported
+
+    - name: ReadFaultLog
+      description: >
+          Read the fault log data, but do not clear it.
+      returns:
+        - name: log
+          type: array[byte]
+          description: >
+              A list of bytes representing the fault log.
+      errors:
+        - com.analog.PSM.Error.FaultLogsNotSupported
+        - com.analog.PSM.Error.NoFaultLog

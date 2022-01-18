@@ -1,0 +1,4 @@
+- name: NoFaultLog
+  description: The device does not have a fault log.
+- name: FaultLogNotSupported
+  description: The device does not support fault logs.

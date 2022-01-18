@@ -32,6 +32,9 @@ endif
 if get_option('data_com_intel')
     selected_subdirs += 'com/intel'
 endif
+if get_option('data_com_analog')
+    selected_subdirs += 'com/analog'
+endif
 if get_option('data_org_freedesktop')
     selected_subdirs += 'org/freedesktop'
 endif
